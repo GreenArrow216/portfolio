@@ -1,0 +1,13 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .flex > div:last-child {
+    margin-left: 20px;
+}
+
+.logo {
+    color: #FFD700;
+}

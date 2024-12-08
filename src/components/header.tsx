@@ -3,7 +3,9 @@ import "./header.css";
 const Header = () => {
   return (
     <div className="navbar">
-      <p className="logo">GG</p>
+      <a href="/">
+        <p className="logo">GG</p>
+      </a>
       <div className="flex">
         <div>
           <a href="/about">About me</a>

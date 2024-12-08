@@ -14,7 +14,6 @@
     text-align: center;
     text-transform: uppercase;
     border: 2px solid transparent; /* Default border (hidden) */
-    border-radius: 10px;
     background: #000; /* Solid black box background */
     position: relative;
     overflow: hidden;
@@ -105,5 +104,174 @@
     margin-bottom: 0;
   }
 
+  .glitch {
+    flex: 1;
+    line-height: .75;
+    font-size: 3rem;
+    margin: auto;
+    color: #1af0dc;
+    text-align: center;
+    transform: scaleX(var(--scale, 1));
+    animation: glitch-p 11s infinite alternate;
+    
+    &::before,
+    &::after {
+      --top: 0;        
+      --left: 0;       
+      --v-height: 30%;
+      
+      --n-tenth: calc(var(--f-size) * .1 * var(--top));
+      --t-cut: calc(var(--n-tenth) / var(--f-size) * 100%);
+      --b-cut: calc(var(--t-cut) + var(--v-height));
+      
+      content: attr(data-text);
+      position: absolute;
+      width: 100%;
+      left: 0;
+      text-align: center;
+      
+      transform: translateX(calc(var(--left) * 100%));
+      
+      filter: drop-shadow(0 0 transparent); 
+      
+      text-shadow: calc(var(--left) * -3em) 0 .02em lime, 
+                   calc(var(--left) * -6em) 0 .02em #ff00e1;
+      
+      background-color: var(--bg);
+      clip-path: polygon(0% var(--t-cut), 100% var(--t-cut), 100% var(--b-cut), 0% var(--b-cut));
+    } 
+    
+    &::before {
+      animation: glitch-b 1.7s infinite alternate-reverse;
+    }
+    &::after {
+      animation: glitch-a 3.1s infinite alternate;
+    }
+  }
   
+  @keyframes glitch-p {
+    17% { --scale: .87; }
+    31% { --scale: 1.1; }
+    37% { --scale: 1.3; }
+    47% { --scale: .91; }
+    87% { --scale: 1; }
+  }
   
+  @keyframes glitch-a {
+    10%,30%,50%,70%,90% {
+      --top: 0;
+      --left: 0;
+    }
+    0% {
+     --v-height: 15%; 
+    }
+    20% {
+      --left: .005;
+    }
+    40% {
+      --left: .01;
+      --v-height: 20%;
+      --top: 3;
+    }
+    60% {
+      --left: .03;
+      --v-height: 25%;
+      --top: 6;
+    }
+    80% {
+      --left: .07;
+      --v-height: 5%;
+      --top: 8;
+    }
+    100% {
+      --left: .083;
+      --v-height: 30%;
+      --top: 1;
+    }
+  }
+  
+  @keyframes glitch-b {
+      10%,30%,50%,70%,90% {
+      --top: 0;
+      --left: 0;
+    }
+    0% {
+     --v-height: 15%; 
+     --top: 10;
+    }
+    20% {
+      --left: -.005;
+    }
+    40% {
+      --left: -.01;
+      --v-height: 17%;
+      --top: 3;
+    }
+    60% {
+      --left: -.03;
+      --v-height: 35%;
+      --top: 6;
+    }
+    80% {
+      --left: -.07;
+      --v-height: 5%;
+      --top: 8;
+    }
+    100% {
+      --left: -.083;
+      --v-height: 30%;
+      --top: 1;
+    }
+  }
+
+  .stack {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  .stack span {
+    font-weight: bold;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    font-size: 4rem;
+    --stack-height: calc(100% / var(--stacks) - 1px);
+    --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+    --clip-top: calc(var(--stack-height) * var(--index));
+    --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+    clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+    animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 2s ease infinite 2s alternate-reverse;
+  }
+  
+  .stack span:nth-child(odd) { --glitch-translate: 8px; }
+  .stack span:nth-child(even) { --glitch-translate: -8px; }
+  
+  @keyframes stack {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%);
+      text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    };
+    60% {
+      opacity: 0.5;
+      transform: translateX(50%);
+    }
+    80% {
+      transform: none;
+      opacity: 1;
+      text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+    100% {
+      text-shadow: none;
+    }
+  }
+  
+  @keyframes glitch {
+    0% {
+      text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+      transform: translate(var(--glitch-translate));
+    }
+    2% {
+      text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+    4%, 100% {  text-shadow: none; transform: none; }
+  }

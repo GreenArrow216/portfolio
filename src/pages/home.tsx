@@ -1,4 +1,8 @@
 import "./home.css";
+import OptiTwin from "../assets/Opti-twin.svg";
+import OLora from "../assets/Orkney-Lora.jpg";
+import Kissflow from "../assets/kissflow.svg";
+import Mallow from "../assets/Mallow-tech.png"
 
 interface CustomStyle extends React.CSSProperties {
   "--index"?: number;
@@ -28,40 +32,76 @@ const Home = () => {
       </div>
       <div className="section-2">
         <div className="experience">
-          <div className="company-logo">Company logo</div>
-          <div className="description">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised
+          <div className="company-logo">
+            <img src={OptiTwin} alt={"opti-twin.logo"} />{" "}
+            <p className="work-date">Feb 2023 - Dec 2024</p>
           </div>
-          {/* <div className="company-logo">Company Logo</div>
           <div className="description">
-            
-          </div> */}
+            Successfully designed and deployed a website and mobile app within a
+            tight three-month timeline using{" "}
+            <span className="cyberpunk-text">
+              TypeScript, Chakra UI, Apollo Client, and GraphQL
+            </span>
+            . Integrated advanced features like
+            <span className="cyberpunk-text">drag-and-drop</span> and unique
+            graph designs with <span className="cyberpunk-text">Visx</span>,
+            ensuring type safety with GraphQL-codegen and seamless collaboration
+            with backend teams. Migrated a React app to Next.js for improved
+            performance and SEO, developed a{" "}
+            <span className="cyberpunk-text">Storybook</span> component library
+            for consistent UI, and utilized{" "}
+            <span className="cyberpunk-text">Cypress</span> for BDD testing.
+            Acted as <span className="cyberpunk-text">Scrum Master</span>,
+            driving team collaboration and progress tracking, while gaining
+            backend development experience in new domains.
+          </div>
         </div>
         <div className="experience">
-          <div className="company-logo">Company logo</div>
+          <div className="company-logo">
+            <img src={OLora} alt={"orkney-lora.logo"} />
+            <p className="work-date">Jul 2022 - Feb 2023</p>
+          </div>
           <div className="description">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised
+            Worked as a part-time developer, developed a search SPA by
+            integrating front-end and back-end, utilizing{" "}
+            <span className="cyberpunk-text">
+              Node.js, Express.js, and PostgreSQL
+            </span>{" "}
+            for API implementation. Designed and completed the search module,
+            including wireframing, within 8 hours.
           </div>
         </div>
         <div className="experience">
-          <div className="company-logo">Company logo</div>
+          <div className="company-logo">
+            <img src={Kissflow} alt={"Kissflow.logo"} />
+            <p className="work-date">Feb 2021 - Aug 2021</p>
+          </div>
           <div className="description">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised
+            Developed a{" "}
+            <span className="cyberpunk-text">new micro-frontend</span> service
+            named Platform by migrating modules from other services.
+            Successfully implemented and deployed bug-free search functionality
+            for <span className="cyberpunk-text">mobile PWAs</span>. Gained
+            hands-on experience with{" "}
+            <span className="cyberpunk-text">Jenkins</span>, deploying two new
+            features to production.
+          </div>
+        </div>
+        <div className="experience">
+          <div className="company-logo">
+            <img src={Mallow} alt={"Mallow.logo"} />
+            <p className="work-date">Oct 2018 - Jan 2021</p>
+          </div>
+          <div className="description">
+            Designed responsive web apps using CSS/Bootstrap and established
+            front-end coding standards. Built a fleet service SPA with HTML,
+            CSS, JavaScript, and jQuery, and developed{" "}
+            <span className="cyberpunk-text">4+ CRM modules</span> using {" "}
+            <span className="cyberpunk-text">
+              React, REST API, Redux, and Redux-Saga
+            </span>
+            . Created a <span className="cyberpunk-text">drag-and-drop</span>{" "}
+            web application and contributed to Agile projects from inception.
           </div>
         </div>
       </div>

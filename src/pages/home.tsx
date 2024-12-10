@@ -3,14 +3,16 @@ import OptiTwin from "../assets/Opti-twin.svg";
 import OLora from "../assets/Orkney-Lora.jpg";
 import Kissflow from "../assets/kissflow.svg";
 import Mallow from "../assets/Mallow-tech.png"
+import { useEffect } from "react";
 
-interface CustomStyle extends React.CSSProperties {
+export interface CustomStyle extends React.CSSProperties {
   "--index"?: number;
 }
 
 const Home = () => {
+
   return (
-    <div className="section">
+    <div className="sections" id={'scroll-container'}>
       <div className="stack" style={{ "--stacks": 3 } as CustomStyle}>
         <span style={{ "--index": 0 } as CustomStyle}>GOWTHAMAN GANESAN</span>
         <span style={{ "--index": 1 } as CustomStyle}>GOWTHAMAN GANESAN</span>

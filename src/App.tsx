@@ -1,7 +1,14 @@
-import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider, Outlet } from 'react-router-dom';
-import Home from './pages/home';
-import Header from './components/header';
-import './App.css'
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+  Outlet,
+} from "react-router-dom";
+import Home from "./pages/home";
+import Header from "./components/Header/header";
+import "./App.css";
+import RainEffect from "./components/RainEffect/rainEffect";
 
 // Layout Component
 function Layout() {
@@ -24,6 +31,7 @@ const router = createBrowserRouter(
 function App() {
   return (
     <>
+      <RainEffect />
       <RouterProvider router={router} />
     </>
   );

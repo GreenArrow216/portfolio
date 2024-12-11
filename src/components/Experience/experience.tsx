@@ -1,6 +1,6 @@
 import OptiTwin from "../../assets/Opti-twin.svg";
 import OLora from "../../assets/Orkney-Lora.jpg";
-import Kissflow from "../../assets/kissflow.svg";
+import Kissflow from "../../assets/Kissflow.svg";
 import Mallow from "../../assets/Mallow-tech.png";
 import { useEffect, useState } from "react";
 import "./experience.css";

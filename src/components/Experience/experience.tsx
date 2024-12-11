@@ -4,18 +4,22 @@ import Kissflow from "../../assets/kissflow.svg";
 import Mallow from "../../assets/Mallow-tech.png";
 import { useEffect, useState } from "react";
 import "./experience.css";
+import GlitchText from "../glitchText/glitchText";
 
 const experiences = [
   {
     logo: OptiTwin, // Replace with actual paths
     description: (
       <>
+        <div className="experience-date">
+          <GlitchText text="Feb 2023 - Dec 2024" />
+        </div>
         Successfully designed and deployed a website and mobile app within a
         tight three-month timeline using{" "}
         <span className="cyberpunk-text">
           TypeScript, Chakra UI, Apollo Client, and GraphQL
         </span>
-        . Integrated advanced features like {' '}
+        . Integrated advanced features like{" "}
         <span className="cyberpunk-text">drag-and-drop</span> and unique graph
         designs with <span className="cyberpunk-text">Visx</span>, ensuring type
         safety with GraphQL-codegen and seamless collaboration with backend
@@ -33,6 +37,9 @@ const experiences = [
     logo: OLora,
     description: (
       <>
+        <div className="experience-date">
+          <GlitchText text="Jul 2022 - Jan 2023" />
+        </div>
         Worked as a part-time developer, developed a search SPA by integrating
         front-end and back-end, utilizing{" "}
         <span className="cyberpunk-text">
@@ -47,10 +54,10 @@ const experiences = [
     logo: Kissflow,
     description: (
       <>
-        {" "}
-        Developed a <span className="cyberpunk-text">
-          new micro-frontend
-        </span>{" "}
+        <div className="experience-date">
+          <GlitchText text="Feb 2021 - Aug 2021" />
+        </div>
+        Developed a <span className="cyberpunk-text">new micro-frontend</span>{" "}
         service named Platform by migrating modules from other services.
         Successfully implemented and deployed bug-free search functionality for{" "}
         <span className="cyberpunk-text">mobile PWAs</span>. Gained hands-on
@@ -63,15 +70,22 @@ const experiences = [
     logo: Mallow,
     description: (
       <>
+        <div className="experience-date">
+          <GlitchText text="Oct 2018 - Jan 2021" />
+        </div>
         Designed responsive web apps using CSS/Bootstrap and established
-        front-end coding standards. Built a fleet service SPA with HTML, CSS,
-        JavaScript, and jQuery, and developed{" "}
-        <span className="cyberpunk-text">4+ CRM modules</span> using{" "}
+        front-end coding standards. Built a fleet service SPA with{" "}
+        <span className="cyberpunk-text">
+          HTML, CSS, JavaScript, and jQuery
+        </span>
+        , and developed <span className="cyberpunk-text">4+ CRM modules</span>{" "}
+        using{" "}
         <span className="cyberpunk-text">
           React, REST API, Redux, and Redux-Saga
         </span>
         . Created a <span className="cyberpunk-text">drag-and-drop</span> web
-        application and contributed to Agile projects from inception.
+        application and contributed to{" "}
+        <span className="cyberpunk-text">Agile projects</span> from inception.
       </>
     ),
   },
@@ -87,7 +101,7 @@ const Experience = () => {
       if (!experienceContainer) return;
 
       const containerRect = experienceContainer.getBoundingClientRect();
-      console.log("pageScroll", activeIndex);
+
       if (
         containerRect.top <= 0 &&
         containerRect.bottom >= window.innerHeight
@@ -153,16 +167,16 @@ const Experience = () => {
         ))}
         <div className="long-big-line-in-the-middle" />
       </div>
-      <div className="description">
+      <div className="description-container">
         {experiences.map((exp, index) => (
-          <p
+          <div
             key={index}
             className={`description ${
               activeIndex === index ? "visible" : "hidden"
             }`}
           >
             {exp.description}
-          </p>
+          </div>
         ))}
       </div>
     </div>

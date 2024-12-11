@@ -80,8 +80,9 @@
   width: 100%;
 }
 
-.section-2 .description {
+.section-2 .description-container {
   flex-basis: 45%;
+  margin-left: 50px;
 }
 
 .section-2 .experience:last-child {
@@ -94,4 +95,12 @@
     width: 100%;
     height: 100%;
   }
+}
+
+.experience-date {
+  margin-bottom: 40px;
+}
+
+.experience-date .stack span{
+  font-size: 26px;
 }

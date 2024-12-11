@@ -1,19 +1,12 @@
 import Experience from "../components/Experience/experience";
+import GlitchText from "../components/glitchText/glitchText";
 import "./home.css";
-
-interface CustomStyle extends React.CSSProperties {
-  "--index"?: number;
-}
 
 const Home = () => {
   return (
     <div className="section">
       <div className="section-1">
-        <div className="stack" style={{ "--stacks": 3 } as CustomStyle}>
-          <span style={{ "--index": 0 } as CustomStyle}>GOWTHAMAN GANESAN</span>
-          <span style={{ "--index": 1 } as CustomStyle}>GOWTHAMAN GANESAN</span>
-          <span style={{ "--index": 2 } as CustomStyle}>GOWTHAMAN GANESAN</span>
-        </div>
+        <GlitchText text="GOWTHAMAN GANESAN"/>
         <div className="cyberpunk-box animate">
           <p>
             I'm a webdeveloper with{" "}

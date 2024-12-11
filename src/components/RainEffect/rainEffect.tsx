@@ -1,12 +1,12 @@
 import { useEffect } from "react";
-import "./RainEffect.css"; // Import the styles
+import "./rainEffect.css"; // Import the styles
 // import Rain from "../../sounds/Rain.mp3";
 // import Thunder from '../../sounds/Thunder.mp3'
 
 const RainEffect = () => {
   useEffect(() => {
     const rainContainer = document.querySelector(".rain-container")!;
-    const numberOfDrops = 100;
+    const numberOfDrops = 80;
 
     const createSplash = (raindrop: HTMLElement) => {
       const splash = document.createElement("div");

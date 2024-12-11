@@ -34,7 +34,7 @@ const Experience = () => {
       if (!experienceContainer) return;
 
       const containerRect = experienceContainer.getBoundingClientRect();
-
+      console.log("pageScroll", activeIndex);
       // Check if section-2 is fully visible
       if (
         containerRect.top <= 0 &&
@@ -48,29 +48,35 @@ const Experience = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     if (!isBoardScrollActive) return;
 
-    let scrollDelta = 0; // Accumulate the scroll distance
-
+    let scrollDelta = 0; 
+    
     const handleBoardScroll = (event: WheelEvent) => {
+      if (activeIndex === 0 && event.deltaY < 0) {
+        setBoardScrollActive(false);
+        return; 
+      }
+
       event.preventDefault();
       scrollDelta += event.deltaY;
 
-      const scrollThreshold = 100; // Adjust this value for sensitivity
+      const scrollThreshold = 200;
 
       if (scrollDelta > scrollThreshold) {
         setActiveIndex((prevIndex) => {
           const newIndex = Math.min(prevIndex + 1, experiences.length - 1);
-          if (newIndex !== prevIndex) scrollDelta = 0; // Reset delta when index changes
+          if (newIndex !== prevIndex) scrollDelta = 0;
           return newIndex;
         });
       } else if (scrollDelta < -scrollThreshold) {
         setActiveIndex((prevIndex) => {
           const newIndex = Math.max(prevIndex - 1, 0);
-          if (newIndex !== prevIndex) scrollDelta = 0; // Reset delta when index changes
+          if (newIndex !== prevIndex) scrollDelta = 0;
           return newIndex;
         });
       }
@@ -78,7 +84,7 @@ const Experience = () => {
 
     window.addEventListener("wheel", handleBoardScroll, { passive: false });
     return () => window.removeEventListener("wheel", handleBoardScroll);
-  }, [isBoardScrollActive]);
+  }, [isBoardScrollActive, activeIndex]);
 
   return (
     <div className="section-2">

@@ -1,12 +1,11 @@
-/* Global styles */
-
 .section-2 {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 50px 0;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .boards {
@@ -39,7 +38,6 @@
   filter: drop-shadow(0 0 10px #00f7ff);
 }
 
-/* Center pipe */
 .long-big-line-in-the-middle {
   position: absolute;
   left: 50%;
@@ -50,13 +48,11 @@
   z-index: 0;
 }
 
-/* Glowing effect for active board */
 .board-active {
   border-color: #ff0077;
   box-shadow: 0 0 20px #ff0077, 0 0 40px #ff0077 inset;
 }
 
-/* Right-side description */
 .description {
   max-width: 400px;
   margin-left: 50px;
@@ -74,4 +70,29 @@
 .description.visible {
   opacity: 1;
   visibility: visible;
+}
+
+.section-2 .experience {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.section-2 .description {
+  flex-basis: 60%;
+  text-align: left;
+}
+
+.section-2 .experience:last-child {
+  margin-bottom: 0;
+}
+
+.experience .company-logo {
+  max-width: 350px;
+  flex-basis: 25%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }

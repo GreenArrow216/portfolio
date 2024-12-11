@@ -2,7 +2,7 @@
   line-height: 1.5;
   font-weight: 400;
   color-scheme: dark;
-  background-color: linear-gradient(to bottom, #050505, #1f006b, #000000);
+  /* background-color: linear-gradient(to bottom, #050505, #1f006b, #000000); */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -12,6 +12,8 @@
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "wdth" 100;
+  /* background-image: url("./assets/bg.jpg"); */
+  background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('./assets/bg.jpg');
 }
 
 a {
@@ -90,7 +92,6 @@ button:focus-visible {
     opacity: 0.5;
   }
 }
-
 
 .glitch {
   flex: 1;

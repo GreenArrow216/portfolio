@@ -8,12 +8,12 @@ interface CustomStyle extends React.CSSProperties {
 const Home = () => {
   return (
     <div className="section">
-      <div className="stack" style={{ "--stacks": 3 } as CustomStyle}>
-        <span style={{ "--index": 0 } as CustomStyle}>GOWTHAMAN GANESAN</span>
-        <span style={{ "--index": 1 } as CustomStyle}>GOWTHAMAN GANESAN</span>
-        <span style={{ "--index": 2 } as CustomStyle}>GOWTHAMAN GANESAN</span>
-      </div>
       <div className="section-1">
+        <div className="stack" style={{ "--stacks": 3 } as CustomStyle}>
+          <span style={{ "--index": 0 } as CustomStyle}>GOWTHAMAN GANESAN</span>
+          <span style={{ "--index": 1 } as CustomStyle}>GOWTHAMAN GANESAN</span>
+          <span style={{ "--index": 2 } as CustomStyle}>GOWTHAMAN GANESAN</span>
+        </div>
         <div className="cyberpunk-box animate">
           <p>
             I'm a webdeveloper with{" "}
@@ -26,8 +26,9 @@ const Home = () => {
             <span className="cyberpunk-text">NextJs</span>
           </p>
         </div>
+        <div className="scroll-text">Scroll</div>
       </div>
-      <Experience/>
+      <Experience />
     </div>
   );
 };

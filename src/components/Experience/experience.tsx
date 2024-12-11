@@ -3,55 +3,82 @@ import OLora from "../../assets/Orkney-Lora.jpg";
 import Kissflow from "../../assets/kissflow.svg";
 import Mallow from "../../assets/Mallow-tech.png";
 import { useEffect, useState } from "react";
-import './experience.css'
+import "./experience.css";
 
 const experiences = [
-    {
-      logo: OptiTwin, // Replace with actual paths
-      description: 'Experience description for first job.',
-    },
-    {
-      logo: OLora,
-      description: 'Experience description for second job.',
-    },
-    {
-      logo: Kissflow,
-      description: 'Experience description for third job.',
-    },
-    {
-      logo: Mallow,
-      description: 'Experience description for fourth job.',
-    },
-  ];
+  {
+    logo: OptiTwin, // Replace with actual paths
+    description: "Experience description for first job.",
+  },
+  {
+    logo: OLora,
+    description: "Experience description for second job.",
+  },
+  {
+    logo: Kissflow,
+    description: "Experience description for third job.",
+  },
+  {
+    logo: Mallow,
+    description: "Experience description for fourth job.",
+  },
+];
 
 const Experience = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isBoardScrollActive, setBoardScrollActive] = useState(false);
 
-  // Scroll detection logic
   useEffect(() => {
     const handleScroll = () => {
-      // Get the experience container
-      const experienceContainer = document.querySelector('.section-2');
+      const experienceContainer = document.querySelector(".section-2");
       if (!experienceContainer) return;
-  
-      // Get the container's position relative to the viewport
+
       const containerRect = experienceContainer.getBoundingClientRect();
-  
-      // Check if the container is in view
-      if (containerRect.top <= window.innerHeight && containerRect.bottom >= 0) {
-        const boardElements = document.querySelectorAll('.board-left, .board-right');
-        boardElements.forEach((el, index) => {
-          const rect = el.getBoundingClientRect();
-          if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-            setActiveIndex(index);
-          }
+
+      // Check if section-2 is fully visible
+      if (
+        containerRect.top <= 0 &&
+        containerRect.bottom >= window.innerHeight
+      ) {
+        setBoardScrollActive(true);
+      } else {
+        setBoardScrollActive(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (!isBoardScrollActive) return;
+
+    let scrollDelta = 0; // Accumulate the scroll distance
+
+    const handleBoardScroll = (event: WheelEvent) => {
+      event.preventDefault();
+      scrollDelta += event.deltaY;
+
+      const scrollThreshold = 100; // Adjust this value for sensitivity
+
+      if (scrollDelta > scrollThreshold) {
+        setActiveIndex((prevIndex) => {
+          const newIndex = Math.min(prevIndex + 1, experiences.length - 1);
+          if (newIndex !== prevIndex) scrollDelta = 0; // Reset delta when index changes
+          return newIndex;
+        });
+      } else if (scrollDelta < -scrollThreshold) {
+        setActiveIndex((prevIndex) => {
+          const newIndex = Math.max(prevIndex - 1, 0);
+          if (newIndex !== prevIndex) scrollDelta = 0; // Reset delta when index changes
+          return newIndex;
         });
       }
     };
-  
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+
+    window.addEventListener("wheel", handleBoardScroll, { passive: false });
+    return () => window.removeEventListener("wheel", handleBoardScroll);
+  }, [isBoardScrollActive]);
 
   return (
     <div className="section-2">
@@ -59,8 +86,8 @@ const Experience = () => {
         {experiences.map((exp, index) => (
           <div
             key={index}
-            className={`board-${index % 2 === 0 ? 'left' : 'right'} ${
-              activeIndex === index ? 'board-active' : ''
+            className={`board-${index % 2 === 0 ? "left" : "right"} ${
+              activeIndex === index ? "board-active" : ""
             }`}
           >
             <img src={exp.logo} alt={`logo-${index}`} />
@@ -73,7 +100,7 @@ const Experience = () => {
           <p
             key={index}
             className={`description ${
-              activeIndex === index ? 'visible' : 'hidden'
+              activeIndex === index ? "visible" : "hidden"
             }`}
           >
             {exp.description}
@@ -81,7 +108,7 @@ const Experience = () => {
         ))}
       </div>
     </div>
-  )
+  );
 };
 
 export default Experience;

@@ -1,5 +1,5 @@
-import Experience from "../components/Experience/experience";
-import GlitchText from "../components/glitchText/glitchText";
+import Experience from "../../components/Experience/experience";
+import GlitchText from "../../components/glitchText/glitchText";
 import "./home.css";
 
 const Home = () => {

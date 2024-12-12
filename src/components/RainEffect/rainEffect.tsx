@@ -1,7 +1,5 @@
 import { useEffect } from "react";
-import "./rainEffect.css"; // Import the styles
-// import Rain from "../../sounds/Rain.mp3";
-// import Thunder from '../../sounds/Thunder.mp3'
+import "./rainEffect.css"; 
 
 const RainEffect = () => {
   useEffect(() => {

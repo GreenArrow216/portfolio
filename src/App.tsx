@@ -5,10 +5,11 @@ import {
   RouterProvider,
   Outlet,
 } from "react-router-dom";
-import Home from "./pages/home";
+import Home from "./pages/Home/home";
 import Header from "./components/Header/header";
 import "./App.css";
 import RainEffect from "./components/RainEffect/rainEffect";
+import About from "./pages/About/about";
 
 // Layout Component
 function Layout() {
@@ -23,7 +24,8 @@ function Layout() {
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
-      <Route index element={<Home />} /> {/* Home rendered at "/" */}
+      <Route index element={<Home />} />
+      <Route path="/about" element={<About />} />
     </Route>
   )
 );

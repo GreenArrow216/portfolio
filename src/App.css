@@ -35,3 +35,12 @@ p{
 .section .section-1 {
   padding: 40px;
 }
+
+img.lazy {
+  filter: blur(10px);
+  transition: filter 0.3s ease-in-out;
+}
+
+img:not(.lazy) {
+  filter: blur(0);
+}

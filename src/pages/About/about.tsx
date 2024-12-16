@@ -1,54 +1,92 @@
-import "./About.css"; 
-import Cat from '../../assets/photographs/Cat.jpg'
-import Pigeon from '../../assets/photographs/Pigeon-BW.jpg'
-import Beach from '../../assets/photographs/Beach Vibe.jpeg'
-import Arrow from '../../assets/sketches/Arrow.jpg'
-import IceCube from '../../assets/sketches/IceCube.jpg'
-import Goku from '../../assets/sketches/Goku.jpg'
-import Gowthaman from '../../assets/Gowthaman-Ganesan.jpg'
+import "./About.css";
+import "../Home/home.css";
+import Cat from "../../assets/photographs/Cat.jpg";
+import Pigeon from "../../assets/photographs/Pigeon-BW.jpg";
+import Beach from "../../assets/photographs/Beach Vibe.jpeg";
+import Arrow from "../../assets/sketches/Arrow.jpg";
+import IceCube from "../../assets/sketches/IceCube.jpg";
+import Goku from "../../assets/sketches/Goku.jpg";
+import Gowthaman from "../../assets/Gowthaman-Ganesan.jpg";
+import GlitchText from "../../components/glitchText/glitchText";
+import useLazyLoadImages from "../../hooks/useLazyLoadImages";
+
+type ImgObj = {
+  id: number;
+  src: string;
+  altText: string;
+};
+
+const sketches: ImgObj[] = [
+  {
+    id: 1,
+    src: Arrow,
+    altText: "arrow.jpg",
+  },
+  {
+    id: 2,
+    src: IceCube,
+    altText: "iceCube.jpg",
+  },
+  { id: 3, src: Goku, altText: "goku.jpg" },
+];
+
+const photos: ImgObj[] = [
+  { id: 1, src: Cat, altText: "Cat.jpg" },
+  { id: 2, src: Pigeon, altText: "Pigeon.jpg" },
+  { id: 3, src: Beach, altText: "Beach.jpg" },
+];
 
 const About = () => {
+  useLazyLoadImages();
   return (
     <div className="about-page">
       {/* Section: About Me */}
+      <GlitchText text="About me" />
       <section className="about-me">
         <div className="photo-container">
-          <img
-            src={Gowthaman}
-            alt="Your Name"
-            className="profile-photo"
-          />
+          <img src={Gowthaman} alt="Your Name" className="profile-photo" />
         </div>
         <div className="about-description">
-          <h2>About Me</h2>
           <p>
-            Hello! I'm <span className="cyberpunk-text">Your Name</span>, a web
-            developer with a passion for <span className="cyberpunk-text">photography</span> and{" "}
-            <span className="cyberpunk-text">sketching</span>. I enjoy creating{" "}
-            <span className="cyberpunk-text">futuristic designs</span> and
-            exploring the boundaries of technology and art. Welcome to my
-            corner of creativity!
+            <span className="cyberpunk-text">Greetings!</span> I'm Gowthaman
+            Ganesan — a web developer by day, night, and everything in between.
+            Crafting sleek, responsive designs is my passion, but when I step
+            away from the keyboard, you’ll find me{" "}
+            <span className="cyberpunk-text">capturing moments</span> through my
+            lens or <span className="cyberpunk-text">sketching ideas</span> that
+            merge art and imagination. Welcome to my digital realm!
           </p>
         </div>
       </section>
 
       {/* Section: Photography */}
       <section className="gallery photography">
-        <h2 className="section-title">Photography</h2>
+
+      <GlitchText text="Photography" />
         <div className="photo-grid">
-          <img src={Cat} alt="Photo 1" className="photo" />
-          <img src={Pigeon} alt="Photo 2" className="photo" />
-          <img src={Beach} alt="Photo 3" className="photo" />
+          {photos.map((photo) => (
+            <img
+              key={photo.id}
+              src={photo.src}
+              alt={photo.altText}
+              className="photo"
+            />
+          ))}
         </div>
       </section>
 
       {/* Section: Sketches */}
       <section className="gallery sketches">
-        <h2 className="section-title">Sketches</h2>
+      <GlitchText text="Sketches" />
         <div className="photo-grid">
-          <img src={Arrow} alt="Sketch 1" className="photo" />
-          <img src={IceCube} alt="Sketch 2" className="photo" />
-          <img src={Goku} alt="Sketch 3" className="photo" />
+          {sketches.map((sketch) => (
+            <img
+              key={sketch.id}
+              src={sketch.src}
+              alt={sketch.altText}
+              className="photo"
+            />
+          ))}
         </div>
       </section>
     </div>

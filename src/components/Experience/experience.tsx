@@ -1,7 +1,7 @@
-import OptiTwin from "../../assets/Opti-twin.svg";
-import OLora from "../../assets/Orkney-Lora.jpg";
-import Kissflow from "../../assets/Kissflow.svg";
-import Mallow from "../../assets/Mallow-tech.png";
+import OptiTwin from "../../assets/companies/Opti-twin.svg";
+import OLora from "../../assets/companies/Orkney-Lora.jpg";
+import Kissflow from "../../assets/companies/Kissflow.svg";
+import Mallow from "../../assets/companies/Mallow-tech.png";
 import { useEffect, useState } from "react";
 import "./experience.css";
 import GlitchText from "../glitchText/glitchText";

@@ -21,11 +21,10 @@
 }
 
 .profile-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  /* border-radius: 50%; */
   border: 3px solid #00f7ff;
-
   object-fit: cover;
   box-shadow: 0 0 10px #00f7ff, 0 0 30px #00f7ff inset;
 }
@@ -36,18 +35,12 @@
 
 .about-description h2 {
   font-size: 2rem;
-  color: #ff0077;
   margin-bottom: 20px;
 }
 
 .about-description p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.8;
-}
-
-.cyberpunk-text {
-  color: #00f7ff;
-  font-weight: bold;
 }
 
 /* Section: Galleries */
@@ -56,9 +49,8 @@
   padding: 50px;
 }
 
-.section-title {
-  font-size: 2rem;
-  color: #ff0077;
+.gallery .stack  span{
+  font-size: 2.5rem;
   margin-bottom: 30px;
 }
 
@@ -74,7 +66,6 @@
   height: auto;
   max-width: 300px;
   border: 3px solid #00f7ff;
-  border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 15px #00f7ff;
 }

@@ -1,0 +1,8 @@
+<svg width="118" height="70" viewBox="0 0 118 70" xmlns="http://www.w3.org/2000/svg">
+    <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000"
+        stroke-width="0.25mm" fill="#ffea00" style="stroke:#000;stroke-width:0.25mm;fill:#ffea00">
+        <path
+            d="M 8 70 L 0 62 L 0 8 L 8 0 L 50 0 L 50 8 L 9 8 L 9 62 L 44.4 62 L 44.4 37.3 L 23 37.3 L 23 29.5 L 53 29.5 L 53 70 L 8 70 Z M 73 70 L 65 62 L 65 8 L 73 0 L 115 0 L 115 8 L 74 8 L 74 62 L 109.4 62 L 109.4 37.3 L 88 37.3 L 88 29.5 L 118 29.5 L 118 70 L 73 70 Z"
+            vector-effect="non-scaling-stroke" />
+    </g>
+</svg>

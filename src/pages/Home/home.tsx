@@ -1,5 +1,5 @@
-import Experience from "../../components/Experience/experience";
-import GlitchText from "../../components/GlitchText/glitchText";
+import Experience from "../../components/Experience/experience.tsx";
+import GlitchText from "../../components/GlitchText/glitchText.tsx";
 import "./home.css";
 import "../../mediaQueries.css"
 

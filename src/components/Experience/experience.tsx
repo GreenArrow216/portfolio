@@ -4,7 +4,7 @@ import OLora from "../../assets/companies/Orkney-Lora.jpg";
 import Kissflow from "../../assets/companies/Kissflow.svg";
 import Mallow from "../../assets/companies/Mallow-tech.png";
 import "./experience.css";
-import GlitchText from "../GlitchText/glitchText.tsx";
+import GlitchText from "../GlitchText/glitchText";
 
 const experiences = [
   {

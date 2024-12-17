@@ -7,8 +7,8 @@ import Arrow from "../../assets/sketches/Arrow.jpg";
 import IceCube from "../../assets/sketches/IceCube.jpg";
 import Goku from "../../assets/sketches/Goku.jpg";
 import Gowthaman from "../../assets/Gowthaman-Ganesan.jpg";
-import GlitchText from "../../components/GlitchText/glitchText.tsx";
 import useLazyLoadImages from "../../hooks/useLazyLoadImages.tsx";
+import GlitchText from "../../components/GlitchText/glitchText.tsx";
 
 type ImgObj = {
   id: number;

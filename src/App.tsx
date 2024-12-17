@@ -8,6 +8,7 @@ import {
 import Home from "./pages/Home/home";
 import Header from "./components/Header/header";
 import "./App.css";
+import "./mediaQueries.css"
 import RainEffect from "./components/RainEffect/rainEffect";
 import About from "./pages/About/about";
 

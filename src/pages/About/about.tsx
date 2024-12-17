@@ -1,4 +1,4 @@
-import "./About.css";
+import "./about.css";
 import "../Home/home.css";
 import Cat from "../../assets/photographs/Cat.jpg";
 import Pigeon from "../../assets/photographs/Pigeon-BW.jpg";
@@ -7,7 +7,7 @@ import Arrow from "../../assets/sketches/Arrow.jpg";
 import IceCube from "../../assets/sketches/IceCube.jpg";
 import Goku from "../../assets/sketches/Goku.jpg";
 import Gowthaman from "../../assets/Gowthaman-Ganesan.jpg";
-import GlitchText from "../../components/glitchText/glitchText";
+import GlitchText from "../../components/GlitchText/glitchText";
 import useLazyLoadImages from "../../hooks/useLazyLoadImages";
 
 type ImgObj = {

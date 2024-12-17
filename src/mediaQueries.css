@@ -1,0 +1,19 @@
+@media (max-width: 1024px) {
+  /* small laps */
+}
+
+/* Small screens (Phones) */
+@media (max-width: 768px) {
+  /* Tablets */
+}
+
+/* Extra small screens (Small phones) */
+@media (max-width: 480px) {
+  #root {
+    padding: 1.2em !important;
+  }
+  .section-1 .stack span {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}

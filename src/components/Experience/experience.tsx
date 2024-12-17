@@ -4,7 +4,7 @@ import Kissflow from "../../assets/companies/Kissflow.svg";
 import Mallow from "../../assets/companies/Mallow-tech.png";
 import { useEffect, useState } from "react";
 import "./experience.css";
-import GlitchText from "../glitchText/glitchText";
+import GlitchText from "../GlitchText/glitchText";
 
 const experiences = [
   {

@@ -1,13 +1,13 @@
 import Experience from "../../components/Experience/experience.tsx";
 import "./home.css";
-import "../../mediaQueries.css"
+import "../../mediaQueries.css";
 import GlitchText from "../../components/GlitchText/glitchText.tsx";
 
 const Home = () => {
   return (
     <div className="section">
       <div className="section-1">
-        <GlitchText text="GOWTHAMAN GANESAN"/>
+        <GlitchText text="GOWTHAMAN GANESAN" />
         <div className="cyberpunk-box animate">
           <p>
             I'm a webdeveloper with{" "}

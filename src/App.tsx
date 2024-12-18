@@ -8,7 +8,7 @@ import {
 import Home from "./pages/Home/home.tsx";
 import Header from "./components/Header/header.tsx";
 import "./App.css";
-import "./mediaQueries.css"
+import "./mediaQueries.css";
 import RainEffect from "./components/RainEffect/rainEffect.tsx";
 import About from "./pages/About/about.tsx";
 

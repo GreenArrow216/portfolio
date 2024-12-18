@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "./rainEffect.css"; 
+import "./rainEffect.css";
 
 const RainEffect = () => {
   useEffect(() => {

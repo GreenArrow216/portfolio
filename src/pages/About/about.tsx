@@ -61,8 +61,7 @@ const About = () => {
 
       {/* Section: Photography */}
       <section className="gallery photography">
-
-      <GlitchText text="Photography" />
+        <GlitchText text="Photography" />
         <div className="photo-grid">
           {photos.map((photo) => (
             <img
@@ -77,7 +76,7 @@ const About = () => {
 
       {/* Section: Sketches */}
       <section className="gallery sketches">
-      <GlitchText text="Sketches" />
+        <GlitchText text="Sketches" />
         <div className="photo-grid">
           {sketches.map((sketch) => (
             <img

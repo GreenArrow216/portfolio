@@ -1,13 +1,13 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar .flex > div:last-child {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .logo {
-    color: #ffea00;
+  color: #ffea00;
 }

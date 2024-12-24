@@ -8,7 +8,7 @@ import IceCube from "../../assets/sketches/IceCube.jpg";
 import Goku from "../../assets/sketches/Goku.jpg";
 import Gowthaman from "../../assets/Gowthaman-Ganesan.jpg";
 import useLazyLoadImages from "../../hooks/useLazyLoadImages.tsx";
-import GlitchText from "../../components/GlitchText/glitchText.tsx";
+import GlitchText from "../../components/GlitchWord/glitchWord.tsx";
 
 type ImgObj = {
   id: number;

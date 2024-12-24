@@ -1,7 +1,7 @@
 import Experience from "../../components/Experience/experience.tsx";
 import "./home.css";
 import "../../mediaQueries.css";
-import GlitchText from "../../components/GlitchText/glitchText.tsx";
+import GlitchText from "../../components/GlitchWord/glitchWord.tsx";
 
 const Home = () => {
   return (

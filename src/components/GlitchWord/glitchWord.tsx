@@ -1,4 +1,4 @@
-import "./glitchText.css";
+import "./glitchWord.css";
 
 interface CustomStyle extends React.CSSProperties {
   "--index"?: number;

@@ -1,39 +1,34 @@
 import "./about.css";
 import "../Home/home.css";
-import Cat from "../../assets/photographs/Cat.jpg";
-import Pigeon from "../../assets/photographs/Pigeon-BW.jpg";
-import Beach from "../../assets/photographs/Beach Vibe.jpeg";
 import Arrow from "../../assets/sketches/Arrow.jpg";
 import IceCube from "../../assets/sketches/IceCube.jpg";
-import Goku from "../../assets/sketches/Goku.jpg";
+import IronMan from "../../assets/sketches/IronMan.jpg";
 import Gowthaman from "../../assets/Gowthaman-Ganesan.jpg";
 import useLazyLoadImages from "../../hooks/useLazyLoadImages.tsx";
 import GlitchText from "../../components/GlitchWord/glitchWord.tsx";
+import Carousel, { CarouselObj } from "../../components/Carousel/carousel.tsx";
+import { photos } from "../../constant.ts";
 
-type ImgObj = {
-  id: number;
-  src: string;
-  altText: string;
-};
-
-const sketches: ImgObj[] = [
+const sketches: CarouselObj[] = [
   {
     id: 1,
-    src: Arrow,
-    altText: "arrow.jpg",
+    image: Arrow,
+    title: "Green Arrow",
+    description: "Sketch of a Green Arrow",
   },
   {
     id: 2,
-    src: IceCube,
-    altText: "iceCube.jpg",
+    image: IceCube,
+    title: "Ice Cube",
+    description: "Sometimes people call me nice cube",
   },
-  { id: 3, src: Goku, altText: "goku.jpg" },
-];
-
-const photos: ImgObj[] = [
-  { id: 1, src: Cat, altText: "Cat.jpg" },
-  { id: 2, src: Pigeon, altText: "Pigeon.jpg" },
-  { id: 3, src: Beach, altText: "Beach.jpg" },
+  {
+    id: 3,
+    image: IronMan,
+    title: "Iron Man",
+    description:
+      "If you are nothing without the suit, you should not have the suit",
+  },
 ];
 
 const About = () => {
@@ -60,34 +55,18 @@ const About = () => {
       </section>
 
       {/* Section: Photography */}
-      <section className="gallery photography">
-        <GlitchText text="Photography" />
-        <div className="photo-grid">
-          {photos.map((photo) => (
-            <img
-              key={photo.id}
-              src={photo.src}
-              alt={photo.altText}
-              className="photo"
-            />
-          ))}
-        </div>
-      </section>
+      <div className="tba">
+        <section>
+          <GlitchText text="Photography" />
+          <Carousel carouselArr={photos} />
+        </section>
 
-      {/* Section: Sketches */}
-      <section className="gallery sketches">
-        <GlitchText text="Sketches" />
-        <div className="photo-grid">
-          {sketches.map((sketch) => (
-            <img
-              key={sketch.id}
-              src={sketch.src}
-              alt={sketch.altText}
-              className="photo"
-            />
-          ))}
-        </div>
-      </section>
+        {/* Section: Sketches */}
+        <section>
+          <GlitchText text="Sketches" />
+          <Carousel carouselArr={sketches} />
+        </section>
+      </div>
     </div>
   );
 };

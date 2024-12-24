@@ -1,0 +1,85 @@
+.carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-content {
+}
+
+.carousel-item {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.carousel-item.active {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item img {
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+}
+
+.carousel-overlay {
+  margin-top: 30px;
+}
+
+/* Controls */
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.carousel-arrow {
+  background: transparent;
+  border: none;
+  color: #ff0077;
+  font-size: 30px;
+  cursor: pointer;
+  text-shadow: 0 0 10px #ff0077, 0 0 20px #ff0077;
+}
+
+.carousel-arrow:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+}
+
+button:focus {
+  outline: 0;
+}
+
+/* Pagination Dots */
+.carousel-pagination {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination-dot {
+  width: 10px;
+  height: 10px;
+  background: #00f7ff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.pagination-dot.active {
+  background: #ff0077;
+  transform: scale(1.5);
+}

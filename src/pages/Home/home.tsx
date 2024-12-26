@@ -5,7 +5,7 @@ import GlitchText from "../../components/GlitchWord/glitchWord.tsx";
 
 const Home = () => {
   return (
-    <div className="section">
+    <div className="section home">
       <div className="section-1">
         <GlitchText text="GOWTHAMAN GANESAN" />
         <div className="cyberpunk-box animate">

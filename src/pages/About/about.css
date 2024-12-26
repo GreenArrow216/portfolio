@@ -86,3 +86,34 @@
     max-width: 100%;
   }
 }
+
+.photos-container .stack {
+  margin-bottom: 20px;
+}
+
+/* Project Details */
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projects .project-details {
+  padding: 40px;
+}
+
+.projects .project-details .cyberpunk-text {
+  font-size: 28px;
+}
+
+.projects .badge {
+  padding: 2px;
+  background-color: pink;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.projects .desc,
+.projects .cyberpunk-text {
+  margin-bottom: 5px;
+}

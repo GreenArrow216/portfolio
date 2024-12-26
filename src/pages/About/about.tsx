@@ -1,35 +1,11 @@
 import "./about.css";
 import "../Home/home.css";
-import Arrow from "../../assets/sketches/Arrow.jpg";
-import IceCube from "../../assets/sketches/IceCube.jpg";
-import IronMan from "../../assets/sketches/IronMan.jpg";
 import Gowthaman from "../../assets/Gowthaman-Ganesan.jpg";
 import useLazyLoadImages from "../../hooks/useLazyLoadImages.tsx";
 import GlitchText from "../../components/GlitchWord/glitchWord.tsx";
-import Carousel, { CarouselObj } from "../../components/Carousel/carousel.tsx";
-import { photos } from "../../constant.ts";
-
-const sketches: CarouselObj[] = [
-  {
-    id: 1,
-    image: Arrow,
-    title: "Green Arrow",
-    description: "Sketch of a Green Arrow",
-  },
-  {
-    id: 2,
-    image: IceCube,
-    title: "Ice Cube",
-    description: "Sometimes people call me nice cube",
-  },
-  {
-    id: 3,
-    image: IronMan,
-    title: "Iron Man",
-    description:
-      "If you are nothing without the suit, you should not have the suit",
-  },
-];
+import Carousel from "../../components/Carousel/carousel.tsx";
+import { photos, projects, sketches } from "../../constant.ts";
+import Badge from "../../components/Badge/badge.tsx";
 
 const About = () => {
   useLazyLoadImages();
@@ -54,18 +30,31 @@ const About = () => {
         </div>
       </section>
 
-      {/* Section: Photography */}
-      <div className="tba">
-        <section>
+      <section className="photos-container">
+        <div>
           <GlitchText text="Photography" />
           <Carousel carouselArr={photos} />
-        </section>
+        </div>
 
         {/* Section: Sketches */}
-        <section>
+        <div>
           <GlitchText text="Sketches" />
           <Carousel carouselArr={sketches} />
-        </section>
+        </div>
+      </section>
+
+      <div>
+        <GlitchText text="Projects" />
+        <div className="projects">
+          {projects.map((project) => (
+            <div className="project-details">
+              <p className="cyberpunk-text">{project.title}</p>
+              <p className="desc">{project.desc}</p>
+              <Badge><a href={project.githubLink} target="_blank" rel="noopener noreferrer">Github</a></Badge>
+              <Badge><a href={project.netlifyLink} target="_blank" rel="noopener noreferrer">Netlify</a></Badge>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

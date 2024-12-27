@@ -43,15 +43,31 @@ const About = () => {
         </div>
       </section>
 
-      <div>
+      <div className="project-container">
         <GlitchText text="Projects" />
         <div className="projects">
           {projects.map((project) => (
-            <div className="project-details">
+            <div className="project-details" key={project.id}>
               <p className="cyberpunk-text">{project.title}</p>
               <p className="desc">{project.desc}</p>
-              <Badge><a href={project.githubLink} target="_blank" rel="noopener noreferrer">Github</a></Badge>
-              <Badge><a href={project.netlifyLink} target="_blank" rel="noopener noreferrer">Netlify</a></Badge>
+              <Badge>
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Github
+                </a>
+              </Badge>
+              <Badge>
+                <a
+                  href={project.netlifyLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Netlify
+                </a>
+              </Badge>
             </div>
           ))}
         </div>

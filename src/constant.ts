@@ -82,7 +82,7 @@ export const projects: Projects[] = [
   {
     id: 3,
     title: "Portfolio",
-    desc: "My site, my resume and my details",
+    desc: "Me, Myself and I",
     githubLink: "https://github.com/GreenArrow216/portfolio",
     netlifyLink: "https://gowthaman-ganesan-portfolio.netlify.app/",
   },

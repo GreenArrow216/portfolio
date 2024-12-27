@@ -10,9 +10,9 @@ const Header = () => {
         <div>
           <a href="/about">About me</a>
         </div>
-        <div>
+        {/* <div>
           <a href="/credits">Credits</a>
-        </div>
+        </div> */}
       </div>
     </div>
   );

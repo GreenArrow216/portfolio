@@ -12,8 +12,103 @@
   #root {
     padding: 1.2em !important;
   }
-  .section-1 .stack span {
-    font-size: 20px;
+
+  /*-------- HOME_PAGE -----------*/
+
+  /* SELF_INTRO_SECTION */
+  #root .section-1 {
+    padding: 15px;
+    justify-content: center;
+    height: calc(100vh - 24px - 30px - 1.2em);
+  }
+  #root .section-1 .stack span {
+    font-size: 30px;
     margin-bottom: 30px;
+  }
+  #root .section-1 .cyberpunk-box {
+    padding: 20px;
+  }
+  #root .section-1 .cyberpunk-box p {
+    font-size: 26px;
+  }
+
+  /* EXPERIENCE_SECTION */
+  #root .section-2 {
+    flex-direction: column;
+  }
+  #root .boards {
+    gap: 10px;
+    flex-direction: row;
+    margin-bottom: 40px;
+  }
+  #root .board-left,
+  #root .board-right {
+    width: 80px;
+    height: 80px;
+  }
+  #root .board-left img,
+  #root .board-right img {
+    width: 60px;
+  }
+  #root .long-big-line-in-the-middle {
+    display: none;
+  }
+  #root .description-container {
+    margin-left: 20px;
+    flex-basis: 50%;
+  }
+  #root .description {
+    margin-left: 0;
+    font-size: 18px;
+  }
+  #root .experience-date {
+    margin-bottom: 0;
+  }
+  #root .experience-date .stack span {
+    margin-bottom: 16px;
+  }
+
+  /* -----------ABOUT_ME_PAGE-------------- */
+
+  /* ABOUT_ME */
+
+  #root .about-page {
+    gap: 30px;
+  }
+  #root .about-page .stack {
+    margin-top: 20px;
+  }
+  #root .about-page .stack span {
+    font-size: 40px;
+  }
+  #root .about-page .about-me {
+    gap: 20px;
+    padding: 30px;
+  }
+  #root .about-me .about-description p {
+    font-size: 1.2rem;
+  }
+
+  /* PHOTOGRAPHY & SKETCHES */
+
+  #root .photos-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* PROJECTS */
+
+  #root .project-container .stack {
+    margin: 20px 0;
+  }
+  #root .projects {
+    flex-direction: column;
+    gap: 30px;
+  }
+  #root .projects .project-details {
+    padding: 0;
+  }
+  #root .projects .project-details .cyberpunk-text {
+    font-size: 26px;
   }
 }

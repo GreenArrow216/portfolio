@@ -152,6 +152,10 @@ const Experience = () => {
     return () => window.removeEventListener("wheel", handleBoardScroll);
   }, [isBoardScrollActive, activeIndex]);
 
+  const onBoardClick = (index: number) => {
+    setActiveIndex(index);
+  };
+
   return (
     <div className="section-2">
       <div className="boards">
@@ -161,6 +165,7 @@ const Experience = () => {
             className={`board-${index % 2 === 0 ? "left" : "right"} ${
               activeIndex === index ? "board-active" : ""
             }`}
+            onClick={() => onBoardClick(index)}
           >
             <img src={exp.logo} alt={`logo-${index}`} />
           </div>

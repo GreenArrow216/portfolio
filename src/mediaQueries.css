@@ -35,11 +35,11 @@
   /* EXPERIENCE_SECTION */
   #root .section-2 {
     flex-direction: column;
+    justify-content: space-evenly;
   }
   #root .boards {
     gap: 10px;
     flex-direction: row;
-    margin-bottom: 40px;
   }
   #root .board-left,
   #root .board-right {

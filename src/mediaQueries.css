@@ -5,6 +5,59 @@
 /* Small screens (Phones) */
 @media (max-width: 768px) {
   /* Tablets */
+
+  /*-------- HOME_PAGE -----------*/
+
+  /* SELF_INTRO_SECTION */
+  #root .section-1 .stack span {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  #root .section-1 .cyberpunk-box p {
+    font-size: 26px;
+  }
+
+  /* EXPERIENCE_SECTION */
+  #root .section-2 {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  #root .boards {
+    gap: 25px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #root .board-left,
+  #root .board-right {
+    width: 220px;
+    height: 150px;
+  }
+  #root .board-left img,
+  #root .board-right img {
+    width: 150px;
+  }
+  #root .long-big-line-in-the-middle {
+    display: none;
+  }
+  #root .description-container {
+    margin-left: 0;
+  }
+
+  /* -----------ABOUT_ME_PAGE-------------- */
+
+  /* ABOUT_ME */
+
+  /* PHOTOGRAPHY & SKETCHES */
+  #root .photos-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #root .projects .project-details {
+    padding: 10px;
+  }
 }
 
 /* Extra small screens (Small phones) */
@@ -40,15 +93,18 @@
   #root .boards {
     gap: 10px;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   #root .board-left,
   #root .board-right {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
   }
   #root .board-left img,
   #root .board-right img {
-    width: 60px;
+    width: 120px;
   }
   #root .long-big-line-in-the-middle {
     display: none;
